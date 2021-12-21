@@ -7,6 +7,12 @@ Webcam.set({
     png_quality: 90
 });
 
+function speak() {
+    synth = window.speechSynthesis
+    speakdata1 = "The First Prediction Is " + Prediction1
+    utterthis = new SpeechSynthesisUtterance(speakdata1)
+    synth.speak(utterthis)
+}
 
 camera = document.getElementById("camera")
 Webcam.attach("#camera")
